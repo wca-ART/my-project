@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tlias智能学习辅助系统</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* 第一部分：顶部导航栏 */
+        .top-nav {
+            width: 1370px;
+            height: 56px;
+            background-color: #aaaaaa; /* 灰色背景 */
+            display: flex;/* 弹性布局 */
+            align-items/* 设置交叉轴 */: center;/* 垂直居中 */
+            justify-content/* 设置主轴 */: space-between;/* 左右对齐 */
+            padding: 0 30px;/* 控制子盒子贴边时与父盒子的间距 */
+        }
+        /* 导航栏标题 */
+        .nav-title {
+            font-size: 36px;/* 设置字体大小 */
+            font-weight: bold;/* 控制字体加粗 */
+            color: #ffffff;
+            /* 设置字体为楷体 */
+            font-family: "楷体";
+        }
+        /* 退出登录链接 */
+        .logout-link {
+            font-size: 16px;
+            color: #ffffff;
+            text-decoration: none;
+        }
+        /*设置鼠标悬停时样式 */
+        .logout-link:hover {
+            color: #cccccc;
+            background-color: #de7c77;
+        }
+        /* 第二部分：搜索表单区域 */
+        .search-form {
+            width: 1370px;
+            margin: 20px auto 0;
+            padding: 24px 30px;
+            background: #f5f7fa;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+        .search-form .form-item {
+            display: flex;
+            flex-direction: column;
+            font-size: 14px;
+            color: #333;
+            min-width: 180px;
+        }
+        .search-form .form-item label {
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        .search-form .form-item input,
+        .search-form .form-item select {
+            height: 40px;
+            padding: 0 12px;
+            border: 1px solid #d9d9d9;
+            border-radius: 8px;
+            background: #ffffff;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.2s ease;
+        }
+        .search-form .form-item input:focus,
+        .search-form .form-item select:focus {
+            border-color: #6c8ce6;
+            box-shadow: 0 0 0 4px rgba(108, 140, 230, 0.12);
+        }
+        .search-form .button-group {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .search-form button {
+            min-width: 120px;
+            height: 42px;
+            border-radius: 8px;
+            border: none;
+            font-size: 15px;
+            cursor: pointer;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+        .search-form button:hover {
+            transform: translateY(-1px);
+        }
+        .search-form .submit-btn {
+            background: #4f7fff;
+            color: #fff;
+        }
+        .search-form .reset-btn {
+            background: #ffffff;
+            color: #555;
+            border: 1px solid #d9d9d9;
+        }
+    </style>
+</head>
+<body>
+    <!-- 第一部分：顶部导航栏 -->
+    <div class="top-nav">
+        <div class="nav-title">tlias智能学习辅助系统</div>
+        <a href="#" class="logout-link">退出登录</a>
+    </div>
+    <!-- 第二部分：搜索表单区域 -->
+    <form class="search-form" action="#" method="get">
+        <div class="form-item">
+            <label for="name">姓名</label>
+            <input type="text" id="name" name="name" placeholder="请输入姓名">
+        </div>
+        <div class="form-item">
+            <label for="gender">性别</label>
+            <select id="gender" name="gender">
+                <option value="">请选择性别</option>
+                <option value="male">男</option>
+                <option value="female">女</option>
+            </select>
+        </div>
+        <div class="form-item">
+            <label for="position">职位</label>
+            <select id="position" name="position">
+                <option value="">请选择职位</option>
+                <option value="head_teacher">班主任</option>
+                <option value="lecturer">讲师</option>
+                <option value="district_supervisor">学区主管</option>
+                <option value="research_supervisor">教研主管</option>
+                <option value="consultant">咨询师</option>
+            </select>
+        </div>
+        <div class="button-group">
+            <button type="submit" class="submit-btn">查询</button>
+            <button type="reset" class="reset-btn">清空</button>
+        </div>
+    </form>
+</body>
+</html>

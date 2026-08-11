@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- form表单：
+    action属性：表单提交时，请求的URL地址
+    method属性：表单提交时，请求的方法
+        get：表单数据出现在url后面，形式/save?name=tom&age=18
+             get请求数据长度有限制，数据会暴露在url中，不安全
+        post：表单数据会在消息体或请求体中提交到服务器
+             post请求数据长度没有限制，数据不会暴露在url中，安全 -->
+    <form action="/save" method="post">
+        姓名：<input type="text" name="name">
+        年龄：<input type="text" name="age">
+        <input type="submit" value="提交"></input>
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex弹性布局</title>
+    <style>
+        #container {
+            background-color: rgb(213, 213, 229);
+            width: 500px;
+            height: 300px;
+            display: flex;
+            /* flex-direction: row;水平布局 主轴为水平  */
+            flex-direction: column;
+            /* flex-start;从头排列 */
+            /* flex-end:从尾部排列 */
+            /* center:主轴上居中对齐 */
+            /* space-around:平分剩余空间 */
+            justify-content: space-between;/* 先两边贴边，再平分剩余空间 */
+
+        }
+        .item {
+            width: 100px;
+            height: 50px;
+            background-color: blue;
+            border: 1px solid rgb(34, 237, 149);
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</body>
+</html>
