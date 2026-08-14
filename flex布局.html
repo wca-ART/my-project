@@ -17,7 +17,14 @@
             /* center:主轴上居中对齐 */
             /* space-around:平分剩余空间 */
             justify-content: space-between;/* 先两边贴边，再平分剩余空间 */
-
+            align-items: center;/* 设置交叉轴上的分布为垂直居中 */
+            align-items: flex-start;/* 交叉轴上从起点开始排列 */
+            align-items: flex-end;/* 交叉轴上从终点开始排列 */
+            align-items: center;/* 交叉轴上居中对齐 */
+            align-items: stretch;/* 交叉轴上拉伸 */
+            align-items: space-between;/* 交叉轴上平分剩余空间 */
+            /* justify-content：管水平左右对齐（主轴）
+            align-items：管垂直上下对齐（交叉轴） */
         }
         .item {
             width: 100px;
